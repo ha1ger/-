@@ -1,0 +1,22 @@
+/* components/classic/essay/index.wxss */
+.essay-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.essay-img{
+  width: 750rpx;
+  height: 500rpx;
+}
+.essay-tag{
+  width: 45rpx;
+  height: 142rpx;
+  position: relative;
+  right: 310rpx;
+  bottom: 58rpx
+}
+.essay-text{
+  text-align: center;
+  max-width: 550rpx;
+  font-size: 36rpx;
+}

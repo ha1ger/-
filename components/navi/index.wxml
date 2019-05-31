@@ -1,0 +1,6 @@
+<!--components/navi/index.wxml-->
+<view class="container">
+  <image bind:tap="onLeft" class="img" src="{{latest?imgUrl.whiteLeft:imgUrl.blackLeft}}"/>
+  <text>{{title}}</text>
+  <image bind:tap="onRight" class="img" src="{{first?imgUrl.whiteRight:imgUrl.blackRight}}"/>
+</view>

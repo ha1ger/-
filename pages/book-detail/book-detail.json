@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "hg-tag": "/components/tag/tag",
+    "hg-like": "/components/like/index",
+    "hg-mask": "/components/mask/mask"
+  }
+}

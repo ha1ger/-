@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "hg-book": "/components/book/book",
+    "hg-search": "/components/search/search"
+  }
+}

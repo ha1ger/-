@@ -1,0 +1,68 @@
+<!--pages/book-detail/book-detail.wxml-->
+<wxs src="../../utils/filter.wxs" module="util" />
+<view class="container">
+  <view class="header">
+    <image src="{{book.image}}"></image>
+    <text class="title">{{book.title}}</text>
+    <text class="author">{{book.author}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">短评</text>
+    <view class="tags">
+      <block wx:for="{{comments}}" wx:key="{{id}}">
+        <hg-tag text="{{item.content}}"
+                nums="{{item.nums}}"
+                first="{{comments[0].content===item.content?true:false}}"
+                second="{{comments[1].content===item.content?true:false}}">
+                </hg-tag>
+      </block>
+    </view>
+  </view>
+  <view class="sub-container">
+    <text class="headline">内容简介</text>
+    <text class="content" decode="true">{{util.format(book.summary)}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">书本信息</text>
+    <view class="detail-container">
+      <view class="vertical description">
+        <text>出版社</text>
+        <text>出版年</text>
+        <text>页数</text>
+        <text>定价</text>
+        <text>装帧</text>
+      </view>
+      <view class="vertical des-content">
+        <text>{{book.publisher}}</text>
+        <text>{{book.pubdate}}</text>
+        <text>{{book.pages}}</text>
+        <text>{{book.price}}</text>
+        <text>{{book.binding}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="post-container" wx:if="{{!posting}}">
+  <view class="post-fake" bind:tap="onFakePost">
+    <text>输入短评</text>
+  </view>
+  <hg-like bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}"/>
+</view>
+<view class="posting-contanier" wx:if="{{posting}}">
+  <view class="posting-header">
+    <text>仅可点击标签+1</text>
+    <text class="cancel" bind:tap="onCancel">取消</text>
+  </view>
+  <view class="comment-container">
+    <block wx:for="{{util.limit(comments,3)}}" wx:key="{{id}}">
+        <hg-tag text="{{item.content}}"
+                nums="{{item.nums}}"
+                first="{{comments[0].content===item.content?true:false}}"
+                second="{{comments[1].content===item.content?true:false}}"
+                bind:tapping="onPost">
+         </hg-tag>
+      </block>
+  </view>
+  <input bind:confirm="onPost" focus="true" class="post" placeholder="最多输入12个字"></input>
+</view>
+<hg-mask wx:if="{{posting}}"/>

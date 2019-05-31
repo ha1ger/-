@@ -1,0 +1,6 @@
+<!--components/classic/essay/index.wxml-->
+<view class="essay-container">
+  <image class="essay-img" src="{{imgUrl}}"/>
+  <image class="essay-tag" src="images/essay@tag.png"/>
+  <text class="essay-text">{{content}}</text>
+</view>

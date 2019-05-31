@@ -1,0 +1,19 @@
+/* components/tag/tag.wxss */
+.container{
+  background: #eee;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 15rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10px
+}
+.text{
+  color:#666666;
+  font-size: 28rpx;
+  padding: 5rpx 15rpx 5rpx 15rpx
+}
+.nums{
+  font-size: 24rpx;
+  color:#999;
+  padding: 0 15rpx
+}

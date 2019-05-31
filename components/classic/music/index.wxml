@@ -1,0 +1,7 @@
+<!--components/classic/music/index.wxml-->
+<view class="music-container">
+  <image class="music-img" src="{{imgUrl}}"/>
+  <image bind:tap="playingChange" class="playing-img" src="{{playing?playerUrl.yes:playerUrl.no}}"/>
+  <image class="music-tag" src="images/music@tag.png"/>
+  <text class="music-text">{{content}}</text>
+</view>

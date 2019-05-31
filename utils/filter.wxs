@@ -1,0 +1,13 @@
+var format = function(text){
+  if (text !== undefined) {
+    var reg = getRegExp('\\\\n','g')
+    return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+  }
+}
+var limit = function(comments,num){
+  return comments.slice(0,num)
+}
+module.exports = {
+  format:format,
+  limit:limit
+} 

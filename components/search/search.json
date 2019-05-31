@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hg-tag": "/components/tag/tag",
+    "hg-book": "/components/book/book",
+    "hg-loading":"/components/loading/loading"
+  }
+}

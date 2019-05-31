@@ -1,0 +1,102 @@
+/* components/search/search.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top:1px solid #f5f5f5;
+  border-bottom:1px solid #f5f5f5;
+  box-shadow:0 0 3px 0 #e3e3e3; 
+  z-index: 99;
+}
+.sub-container{
+  margin-top: 100rpx
+}
+.search-box{
+  width: 600rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  color:#999999;
+  font-size: 28rpx;
+  border-radius: 50rpx;
+}
+.search-box image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.search-img{
+  margin-left: 35rpx;
+}
+.search-input{
+  margin-left: 15rpx;
+  width: 470rpx;
+}
+.cancel{
+  font-size: 32rpx;
+  margin-right: 15rpx;
+}
+.search-tags{
+  width: 690rpx;
+  margin-top: 40rpx
+}
+.chunk {
+  height: 30rpx;
+  width: 10rpx;
+  background-color: #000;
+  display: inline-block;
+  margin-right: 10px;
+}
+.tags{
+  margin: 30rpx 0 0 15rpx;
+}
+hg-tag{
+  margin-right: 10rpx;
+  display: inline-block;
+  margin-bottom: 10rpx;
+}
+.nothing{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rpx
+}
+.result{
+  margin-top: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 80rpx;
+}
+.result hg-book{
+  margin-bottom: 20rpx;
+}
+.loadingCenter{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  z-index: 999
+}
+.loadingBottom{
+  display: block;
+  margin: 50rpx 0 50rpx 300rpx
+}

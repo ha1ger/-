@@ -1,0 +1,32 @@
+/* components/classic/music/index.wxss */
+.music-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.music-img{
+  width: 420rpx;
+  height: 420rpx;
+  border-radius: 210rpx;
+  margin-top: 60rpx;
+}
+.playing-img{
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  bottom: 271rpx;
+}
+.music-tag{
+  width: 44rpx;
+  height: 127rpx;
+  position: relative;
+  right: 310rpx;
+  bottom: 160rpx
+}
+.music-text{
+  text-align: center;
+  max-width: 550rpx;
+  font-size: 36rpx;
+  position: relative;
+  bottom: 80rpx;
+}

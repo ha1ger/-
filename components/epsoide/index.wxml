@@ -1,0 +1,19 @@
+<!--components/epsoide/index.wxml-->
+<view class="container">
+  <view class="index-container">
+    <text class="No">No.</text>
+    <text class="index">{{m1.changeIndex(index)}}</text>
+    <view class="line"></view>
+  </view>
+  <view class="date-container">
+    <text class="month">{{month}}</text>
+    <text class="year">{{year}}</text>
+  </view>
+</view>
+<wxs module="m1">
+  var changeIndex = function(newVal){
+   var val = newVal < 10 ? '0' + newVal : newVal;
+     return val;
+  }
+  module.exports.changeIndex = changeIndex;
+</wxs>

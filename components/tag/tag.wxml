@@ -1,0 +1,5 @@
+<!--components/tag/tag.wxml-->
+<view class="container" style="background:{{bg}}">
+  <text class="text" bind:tap="onTap">{{text}}</text>
+  <text class="nums" wx:if="{{nums}}">+{{nums}}</text>
+</view>

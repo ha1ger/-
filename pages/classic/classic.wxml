@@ -1,0 +1,29 @@
+<!--pages/classic/classic.wxml-->
+<view class="container">
+  <view class="header">
+    <hg-epsoide class="epsoide" 
+                index="{{classic.index}}"/>
+    <hg-like class="like" 
+             bind:like="onLike" 
+             like="{{likeStatus}}" 
+             count="{{likeCount}}" />
+  </view>
+  <hg-movie wx-if="{{classic.type==100}}"
+            imgUrl="{{classic.image}}" 
+            content="{{classic.content}}"/>
+  <hg-music id="music"
+            imgUrl="{{classic.image}}"
+            wx-if="{{classic.type==200}}" 
+            content="{{classic.content}}" 
+            src="{{classic.url}}"
+            title="{{classic.title}}"/>
+  <hg-essay imgUrl="{{classic.image}}"
+            wx-if="{{classic.type==300}}"
+            content="{{classic.content}}"/>
+  <hg-navi bind:next="onNext"
+            bind:pre="onPre"
+            title="{{classic.title}}"
+            first="{{first}}"
+            latest="{{latest}}"
+            class="navi"/>
+</view>

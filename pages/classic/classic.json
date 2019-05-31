@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "hg-like":"/components/like/index",
+    "hg-movie":"/components/classic/movie/index",
+    "hg-music": "/components/classic/music/index",
+    "hg-essay": "/components/classic/essay/index",
+    "hg-epsoide":"/components/epsoide/index",
+    "hg-navi":"/components/navi/index"
+  }
+}

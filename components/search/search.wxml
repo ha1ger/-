@@ -1,0 +1,46 @@
+<!--components/search/search.wxml-->
+<view class="container">
+  <view class="header">
+   <view class="search-box">
+     <image class="search-img" src="/images/icon/search.png" />
+     <input value="{{inputValue}}"
+            bind:confirm="onConfirm" 
+            class="search-input"
+            placeholder="书籍名" 
+            auto-focus="true"/>
+     <image bind:tap="onReSearch" src="/images/icon/cancel.png" />
+    </view>
+    <text class="cancel" bind:tap="onCancel">取消</text>
+  </view>
+  <view class="sub-container" wx:if="{{!result&&!getNothing}}">
+    <view class="hitsory-search search-tags">
+      <view class="chunk"></view>
+      <text>历史搜索</text>
+      <view class="tags">
+        <block wx:for="{{history}}" wx:key="{{id}}">
+          <hg-tag text="{{item}}" bind:tapping="tagSearch"></hg-tag>
+        </block>
+      </view>
+    </view>
+    <view class="hot-search search-tags">
+      <view class="chunk"></view>
+      <text>热门搜索</text>
+      <view class="tags">
+        <block wx:for="{{hot}}" wx:key="{{id}}">
+          <hg-tag text="{{item}}" bind:tapping="tagSearch"></hg-tag>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="nothing" wx:if="{{getNothing}}">
+    <text>没有搜索到任何书籍！</text>
+  </view>
+  <view class="result" wx:if="{{result}}">
+      <block wx:for="{{books}}" wx:key="id">
+        <hg-book book="{{item}}"></hg-book>
+      </block>
+        <hg-loading class='loadingBottom' wx:if="{{showLoadingBottom}}"></hg-loading>
+  </view>
+  <hg-loading class='loadingCenter' wx:if="{{showLoadingCenter}}"></hg-loading>
+
+</view>
